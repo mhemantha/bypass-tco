@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "bypass-tco",
+  "description": "Try to bypass twitter's t.co link shortener when the expanded link data is available",
+  "version": "1.0",
+
+  "applications": {
+    "gecko": {
+      "id": "bypass-tco@webextensions.hemantha.me",
+      "strict_min_version": "46.0",
+      "update_url": "https://github.com/mhemantha/webextensions/bypass-tco"
+    }
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://mobile.twitter.com/*", "*://twitter.com/*"],
+      "js": ["rewrite.js"]
+    }
+  ]
+}
